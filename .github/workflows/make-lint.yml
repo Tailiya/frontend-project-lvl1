@@ -1,8 +1,24 @@
 name: make-lint
-on: make lint
+on: push
 jobs:
-  my-job:
+  build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [v16.13.2]
+
     steps:
-      - name: my-step
-        run: npx eslint .
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install
+        run: |
+          make install
+        env:
+          CI: true
+      - name: Run linter
+        run: |
+          make lint
