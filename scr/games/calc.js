@@ -1,19 +1,20 @@
 import getRandom from '../get-random.js';
+
 import gameLogic from '../index.js';
 
 const gameRules = 'What is the result of the expression?';
 
-const arithmeticExpressions = (a, b, operation) => {
+const expressions = (numOne, operation, numTwo) => {
   let result;
   switch (operation) {
     case '+':
-      result = a + b;
+      result = numOne + numTwo;
       break;
     case '-':
-      result = a - b;
+      result = numOne - numTwo;
       break;
     case '*':
-      result = a * b;
+      result = numOne * numTwo;
       break;
     default:
       result = null;
@@ -22,12 +23,12 @@ const arithmeticExpressions = (a, b, operation) => {
 };
 
 const gameFunction = () => {
-  const a = getRandom(1, 10);
-  const b = getRandom(1, 10);
+  const numOne = getRandom(1, 10);
+  const numTwo = getRandom(1, 10);
   const operator = ['+', '-', '*'];
-  const randomOperation = Math.floor(Math.random() * operator.length);
-  const question = `${a} ${operator[randomOperation]} ${b}`;
-  const correctAnswer = `${arithmeticExpressions(a, b, randomOperation)}`;
+  const randomOp = Math.floor(Math.random() * operator.length);
+  const question = `${numOne} ${operator[randomOp]} ${numTwo}`;
+  const correctAnswer = `${expressions(numOne, operator[randomOp], numTwo)}`;
   return [question, correctAnswer];
 };
 
