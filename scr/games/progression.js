@@ -13,7 +13,7 @@ const gameFunction = () => {
   }
   const arrayLength = 10;
   const arrTenNum = arr.slice(0, arrayLength);
-  const randomPosition = getRandom(2, 11);
+  const randomPosition = getRandom(2, 12);
   const correctAnswer = arrTenNum.splice(randomPosition, 1, '..').join('');
   const question = `Question: ${arrTenNum.join(' ')}`;
   return [question, correctAnswer];
