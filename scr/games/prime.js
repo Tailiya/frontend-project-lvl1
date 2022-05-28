@@ -10,6 +10,9 @@ const primeNum = (num) => {
     if (num % i === 0) {
       corAnswer = 'no';
     }
+    if (num % i !== 0) {
+      corAnswer = 'no';
+    }
   }
   return corAnswer;
 };
