@@ -9,9 +9,8 @@ const primeNum = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       corAnswer = 'no';
-    }
-    if (num % i !== 0) {
-      corAnswer = 'no';
+    } else if (num % i !== 0) {
+      corAnswer = 'yes';
     }
   }
   return corAnswer;
