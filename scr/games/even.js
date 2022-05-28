@@ -5,7 +5,7 @@ import gameLogic from '../index.js';
 const gameRules = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const gameFunction = () => {
-  const number = getRandom(1, 99);
+  const number = getRandom(1, 100);
   const question = `Question: ${number}`;
   const evenCount = number % 2 === 0;
   const correctAnswer = evenCount ? 'yes' : 'no';
