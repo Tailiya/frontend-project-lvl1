@@ -2,8 +2,7 @@ import getRandom from '../get-random.js';
 
 import gameLogic from '../index.js';
 
-const gameRules =
-  'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameRules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const primeNum = (num) => {
   let corAnswer = '';

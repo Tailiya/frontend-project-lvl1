@@ -4,7 +4,7 @@ const gameLogic = (gameRules, gameFunction) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
-  console.log(`${gameRules}`); // правила игры вызываются в зависимости от игры
+  console.log(`${gameRules}`);
   const round = 3;
   for (let i = 1; i <= round; i += 1) {
     const [questions, correctAnswer] = gameFunction();
