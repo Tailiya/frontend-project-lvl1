@@ -9,15 +9,13 @@ const primeNum = (num) => {
   for (let i = 2; i < num; i += 1) {
     if (num % i === 0) {
       corAnswer = 'no';
-    } else if (num % i !== 0) {
-      corAnswer = 'yes';
     }
   }
   return corAnswer;
 };
 
 const gameFunction = () => {
-  const num = getRandom(1, 20);
+  const num = getRandom(2, 20);
   const question = `Question: ${num}`;
   const correctAnswer = `${primeNum(num) ? 'no' : 'yes'}`;
   return [question, correctAnswer];
