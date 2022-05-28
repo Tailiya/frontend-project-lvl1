@@ -15,7 +15,7 @@ const gameFunction = () => {
   const arrTenNum = arr.slice(0, arrayLength);
   const randomPosition = getRandom(2, 11);
   const correctAnswer = arrTenNum.splice(randomPosition, 1, '..').join('');
-  const question = `${arrTenNum.join(' ')}`;
+  const question = `Question: ${arrTenNum.join(' ')}`;
   return [question, correctAnswer];
 };
 

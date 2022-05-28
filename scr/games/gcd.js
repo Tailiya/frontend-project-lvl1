@@ -15,7 +15,7 @@ const gcd = (numOne, numTwo) => {
 const gameFunction = () => {
   const numOne = getRandom(1, 15);
   const numTwo = getRandom(1, 15);
-  const question = `${numOne} ${numTwo}`;
+  const question = `Question: ${numOne} ${numTwo}`;
   const correctAnswer = `${gcd(numOne, numTwo)}`;
   return [question, correctAnswer];
 };

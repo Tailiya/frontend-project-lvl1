@@ -17,7 +17,7 @@ const primeNum = (num) => {
 
 const gameFunction = () => {
   const num = getRandom(1, 20);
-  const question = `${num}`;
+  const question = `Question: ${num}`;
   const correctAnswer = `${primeNum(num) ? 'no' : 'yes'}`;
   return [question, correctAnswer];
 };

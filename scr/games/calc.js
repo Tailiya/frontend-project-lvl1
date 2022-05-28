@@ -27,7 +27,7 @@ const gameFunction = () => {
   const numTwo = getRandom(1, 10);
   const operator = ['+', '-', '*'];
   const randomOp = Math.floor(Math.random() * operator.length);
-  const question = `${numOne} ${operator[randomOp]} ${numTwo}`;
+  const question = `Question: ${numOne} ${operator[randomOp]} ${numTwo}`;
   const correctAnswer = `${expressions(numOne, operator[randomOp], numTwo)}`;
   return [question, correctAnswer];
 };
